@@ -59,3 +59,70 @@ body {
   font-family: "JetBrains Mono", monospace !important;
   font-size: 12px !important;
 }
+
+/* ---------------- LIGHT THEME OVERRIDES ----------------
+   Toggled by `.theme-light` on the root container.
+   Keeps the cyan accent; flips slate-* neutrals to a paper palette. */
+
+.theme-light {
+  background: #f5f7fa;
+  color: #0f172a;
+}
+
+.theme-light .bg-orbit {
+  background:
+    radial-gradient(60% 80% at 80% 10%, rgba(8, 145, 178, 0.10), transparent 60%),
+    radial-gradient(45% 60% at 10% 95%, rgba(5, 150, 105, 0.08), transparent 60%),
+    #f5f7fa;
+}
+
+.theme-light .bg-grid {
+  background-image:
+    radial-gradient(rgba(15, 23, 42, 0.10) 1px, transparent 1px),
+    radial-gradient(rgba(15, 23, 42, 0.06) 1px, transparent 1px);
+}
+
+/* Card / surface backgrounds */
+.theme-light .bg-slate-900\/40 { background-color: rgba(255, 255, 255, 0.7) !important; }
+.theme-light .bg-slate-900\/60 { background-color: rgba(255, 255, 255, 0.82) !important; }
+.theme-light .bg-slate-900\/80 { background-color: rgba(255, 255, 255, 0.92) !important; }
+.theme-light .bg-slate-900\/20 { background-color: rgba(255, 255, 255, 0.55) !important; }
+.theme-light .bg-slate-900\/95 { background-color: rgba(255, 255, 255, 0.97) !important; }
+.theme-light .bg-slate-800\/80 { background-color: rgba(15, 23, 42, 0.08) !important; }
+.theme-light .bg-slate-800 { background-color: rgba(15, 23, 42, 0.10) !important; }
+
+/* Borders */
+.theme-light .border-slate-800\/80 { border-color: rgba(15, 23, 42, 0.10) !important; }
+.theme-light .border-slate-800\/60 { border-color: rgba(15, 23, 42, 0.08) !important; }
+.theme-light .border-slate-700\/60 { border-color: rgba(15, 23, 42, 0.14) !important; }
+.theme-light .border-slate-700 { border-color: rgba(15, 23, 42, 0.16) !important; }
+
+/* Text colors */
+.theme-light .text-white { color: #0b1220 !important; }
+.theme-light .text-slate-200 { color: #1e293b !important; }
+.theme-light .text-slate-300 { color: #334155 !important; }
+.theme-light .text-slate-400 { color: #475569 !important; }
+.theme-light .text-slate-500 { color: #64748b !important; }
+.theme-light .text-slate-600 { color: #64748b !important; }
+
+/* Progress strip + nav pill keep contrast in light mode */
+.theme-light .bg-slate-700\/50 { background-color: rgba(15, 23, 42, 0.12) !important; }
+
+/* Recharts axis labels — boost contrast for light bg */
+.theme-light .recharts-cartesian-axis-tick-value tspan {
+  fill: #475569 !important;
+}
+.theme-light .recharts-cartesian-grid line {
+  stroke: rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Recharts tooltip */
+.theme-light .recharts-default-tooltip {
+  background: #ffffff !important;
+  border-color: rgba(15, 23, 42, 0.14) !important;
+  color: #0f172a !important;
+}
+.theme-light .recharts-default-tooltip .recharts-tooltip-label,
+.theme-light .recharts-default-tooltip .recharts-tooltip-item {
+  color: #0f172a !important;
+}

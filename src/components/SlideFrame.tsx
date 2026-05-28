@@ -70,7 +70,6 @@ export function SlideFrame({
 
       <footer className="mt-4 flex items-center justify-between font-mono text-[10.5px] uppercase tracking-[0.22em] text-slate-600">
         <span>v1.0 · Vinh Trương</span>
-        <span>← / → to navigate</span>
       </footer>
     </motion.section>
   );
