@@ -60,6 +60,17 @@ export default function App() {
         </div>
         <NavBtn onClick={next} disabled={i === total - 1} label="→" />
       </div>
+
+      {/* Back to start */}
+      <button
+        onClick={() => setI(0)}
+        disabled={i === 0}
+        aria-label="Back to slide 1"
+        className="group fixed bottom-6 right-6 z-30 flex items-center gap-2 rounded-full border border-slate-800/80 bg-slate-900/80 px-4 py-2 font-mono text-xs uppercase tracking-[0.18em] text-slate-300 backdrop-blur transition hover:border-accent/60 hover:text-accent disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-slate-800/80 disabled:hover:text-slate-300"
+      >
+        <span aria-hidden className="text-base leading-none">⤺</span>
+        <span>Slide 1 / {String(total).padStart(2, "0")}</span>
+      </button>
     </div>
   );
 }
